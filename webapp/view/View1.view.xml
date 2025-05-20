@@ -1,0 +1,100 @@
+<mvc:View
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:sap.ui.core="sap.ui.core"
+  xmlns:sap.ui.layout.form="sap.ui.layout.form"
+  xmlns:core="sap.ui.core"
+  controllerName="com.acn.training.simpleform.controller.View1">
+
+  <Page id="pageTitle" title="User Form">
+    <content>
+      <sap.ui.layout.form:Form id="form">
+        <sap.ui.layout.form:title>
+          <sap.ui.core:Title id="formTitle" text="Personal Information"/>
+        </sap.ui.layout.form:title>
+
+        <sap.ui.layout.form:layout>
+          <sap.ui.layout.form:ResponsiveGridLayout id="formLayout"/>
+        </sap.ui.layout.form:layout>
+
+        <sap.ui.layout.form:formContainers>
+          <sap.ui.layout.form:FormContainer id="formContainer1">
+
+            <sap.ui.layout.form:formElements>
+
+              <!-- Name -->
+              <sap.ui.layout.form:FormElement id="formElementName">
+                <sap.ui.layout.form:label>
+                  <Label id="labelName" text="Name"/>
+                </sap.ui.layout.form:label>
+                <sap.ui.layout.form:fields>
+                  <Input id="inputName" width="100%" placeholder="Enter your name" />
+                </sap.ui.layout.form:fields>
+              </sap.ui.layout.form:FormElement>
+
+              <!-- Street/No -->
+              <sap.ui.layout.form:FormElement id="formElementStreetNo">
+                <sap.ui.layout.form:label>
+                  <Label id="labelStreetNo" text="Street / No."/>
+                </sap.ui.layout.form:label>
+                <sap.ui.layout.form:fields>
+                  <HBox id="hboxStreetNo" renderType="Bare" width="100%" justifyContent="Start" alignItems="Center" >
+                    <Input id="inputStreet" width="70%" placeholder="Street" />
+                    <Input id="inputNo" width="30%" placeholder="No." />
+                  </HBox>
+                </sap.ui.layout.form:fields>
+              </sap.ui.layout.form:FormElement>
+
+              <!-- Zip Code / City -->
+              <sap.ui.layout.form:FormElement id="formElementZipCity">
+                <sap.ui.layout.form:label>
+                  <Label id="labelZipCity" text="Zip Code / City"/>
+                </sap.ui.layout.form:label>
+                <sap.ui.layout.form:fields>
+                  <HBox id="hboxZipCity" renderType="Bare" width="100%" justifyContent="Start" alignItems="Center" >
+                    <Input id="inputZip" width="40%" placeholder="ZIP Code" />
+                    <Input id="inputCity" width="60%" placeholder="City" />
+                  </HBox>
+                </sap.ui.layout.form:fields>
+              </sap.ui.layout.form:FormElement>
+
+              <!-- Country -->
+              <sap.ui.layout.form:FormElement id="formElementCountry">
+                <sap.ui.layout.form:label>
+                  <Label id="labelCountry" text="Country"/>
+                </sap.ui.layout.form:label>
+                <sap.ui.layout.form:fields>
+                  <ComboBox id="comboCountry" placeholder="Select Country" width="100%">
+                    <items>
+                      <core:Item id="itemEngland" key="EN" text="England"/>
+                      <core:Item id="itemGermany" key="DE" text="Germany"/>
+                      <core:Item id="itemUSA" key="US" text="USA"/>
+                      <core:Item id="itemPhilippines" key="PH" text="Philippines"/>
+                    </items>
+                  </ComboBox>
+                </sap.ui.layout.form:fields>
+              </sap.ui.layout.form:FormElement>
+
+            </sap.ui.layout.form:formElements>
+
+            <!-- Buttons at bottom right -->
+            <sap.ui.layout.form:formElements>
+              <sap.ui.layout.form:FormElement id="formElementButtons" visible="true">
+                <sap.ui.layout.form:fields>
+                  <Toolbar id="toolbarButtons" width="100%">
+                    <ToolbarSpacer id="toolbarSpacer" />
+                    <Button id="btnSave" text="Save" type="Emphasized" press="onSavePress" />
+                    <Button id="btnClear" text="Clear" type="Reject" press="onClearPress" />
+                  </Toolbar>
+                </sap.ui.layout.form:fields>
+              </sap.ui.layout.form:FormElement>
+            </sap.ui.layout.form:formElements>
+
+          </sap.ui.layout.form:FormContainer>
+        </sap.ui.layout.form:formContainers>
+
+      </sap.ui.layout.form:Form>
+    </content>
+  </Page>
+
+</mvc:View>
