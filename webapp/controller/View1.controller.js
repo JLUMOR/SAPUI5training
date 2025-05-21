@@ -11,6 +11,8 @@ sap.ui.define([
       this.byId("inputZip").setValue("");
       this.byId("inputCity").setValue("");
       this.byId("comboCountry").setSelectedKey("");
+
+      sap.m.MessageToast.show("Data Cleared!");
     },
 
     onSavePress: function () {
